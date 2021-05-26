@@ -7,6 +7,30 @@ use App\User;
 
 class UserController extends BaseController
 {
+
+    /**
+     * 账号绑定
+     * @return false|string
+     */
+    public function auth_url(){
+        $res['encode_auth_url'] = 'https://s.click.ele.me/sWtCTnu';
+        return $this->success($res);
+    }
+    /**
+     * 我的订单
+     * @return false|string
+     */
+    public function order(){
+        return $this->success();
+    }
+
+    /**
+     * 我的团队
+     * @return false|string
+     */
+    public function teams(){
+        return $this->success();
+    }
     /**
      * 幻灯片广告
      * @return false|string

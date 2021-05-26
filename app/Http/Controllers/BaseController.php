@@ -13,7 +13,7 @@ class BaseController extends Controller
      * @param string $msg
      * @return false|string
      */
-    public function success($data, $code = 200, $msg = '成功')
+    public function success($data=[], $code = 200, $msg = '成功')
     {
         $data = [
             'code' => $code,

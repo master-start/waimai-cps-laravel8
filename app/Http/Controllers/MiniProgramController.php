@@ -61,6 +61,13 @@ class MiniProgramController extends BaseController
         return $this->success($res);
     }
 
+    public function get_ele_url(Request $request){
+        $res['wx_qrcode_url'] = 'https://gqrcode.alicdn.com/img?type=hv&text=https%3A%2F%2Fs.click.ele.me%2FsWtCTnu%3Faf%3D3%26union_lens%3DlensId%253AOPT%25401622017324%2540210584ee_07ce_179a7c43646_0413%254001%253BeventPageId%253A20150318020002597%26&h=300&w=300';
+        $res['wx_miniprogram_path'] = 'pages/sharePid/web/index?scene=https://s.click.ele.me/sWtCTnu';
+        $res['appid'] = 'wxece3a9a4c82f58c9';
+        $data['data'] = $res;
+        return $this->success($data);
+    }
     /**
      * 获取相关设置
      * @param Request $request
@@ -87,6 +94,9 @@ class MiniProgramController extends BaseController
         $res['share_content_meituan'] = '美团餐前福利！外卖红包天天领，最高可得66元！';
         $res['share_title'] = '天天来领外卖优惠券！';
         $res['take_out_ratio'] = 0;
+        $res['tbk_r_id'] = 0; //是否绑定了淘宝客
+        $res['tbk_name'] = 0; //淘宝客昵称
+
         return $this->success($res);
     }
 

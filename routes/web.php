@@ -29,8 +29,12 @@ Route::prefix('user')->group(function (){
     Route::any('setting/index',[\App\Http\Controllers\MiniProgramController::class,'setting']);
     Route::any('user/wxQrcode',[\App\Http\Controllers\MiniProgramController::class,'wxQrcode']);
     Route::any('index/get_meituan_qrcode',[\App\Http\Controllers\MiniProgramController::class,'get_meituan_qrcode']);
+    Route::any('index/get_url',[\App\Http\Controllers\MiniProgramController::class,'get_ele_url']);
     Route::any('index/banner',[\App\Http\Controllers\UserController::class,'banner']);
     Route::any('index/ad',[\App\Http\Controllers\UserController::class,'ad']);
+    Route::any('user/teams',[\App\Http\Controllers\UserController::class,'teams']);
+    Route::any('order/index',[\App\Http\Controllers\UserController::class,'order']);
+    Route::any('tbk/auth_url',[\App\Http\Controllers\UserController::class,'auth_url']);
     Route::any('test',function (){
         return 111;
     });
