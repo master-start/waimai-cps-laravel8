@@ -113,12 +113,19 @@ class MiniProgramController extends BaseController
         $meiTuan = new MeiTuanController(null,$actId);
         $res = $meiTuan->miniCode();
         if ($res['status'] == 0 && !empty($res['data'])){
-            $contents = file_get_contents($res['data']);
-            file_put_contents('img/mt.png', $contents);
+            self::downFile($res['data'],'img/','mt.png');
             return $this->success($res['data']);
         }else{
             return $this->error($res['des']);
         }
+    }
+    protected function downFile($file_url, $save_to,$filename)
+    {
+        $content = file_get_contents($file_url);
+        if (!is_dir($save_to)) {
+            mkdir($save_to, 0755, true); // @codeCoverageIgnore
+        }
+        file_put_contents($save_to.$filename, $content);
     }
 
     /**
