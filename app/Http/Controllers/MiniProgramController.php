@@ -62,7 +62,7 @@ class MiniProgramController extends BaseController
     }
 
     public function get_ele_url(Request $request){
-        $res['wx_qrcode_url'] = 'https://gqrcode.alicdn.com/img?type=hv&text=https%3A%2F%2Fs.click.ele.me%2FsWtCTnu%3Faf%3D3%26union_lens%3DlensId%253AOPT%25401622017324%2540210584ee_07ce_179a7c43646_0413%254001%253BeventPageId%253A20150318020002597%26&h=300&w=300';
+        $res['wx_qrcode_url'] = 'https://cps.open-shop.cn/img/ele.png';
         $res['wx_miniprogram_path'] = 'pages/sharePid/web/index?scene=https://s.click.ele.me/sWtCTnu';
         $res['appid'] = 'wxece3a9a4c82f58c9';
         $data['data'] = $res;
@@ -113,6 +113,8 @@ class MiniProgramController extends BaseController
         $meiTuan = new MeiTuanController(null,$actId);
         $res = $meiTuan->miniCode();
         if ($res['status'] == 0 && !empty($res['data'])){
+            $contents = file_get_contents($res['data']);
+            file_put_contents('img/mt.png', $contents);
             return $this->success($res['data']);
         }else{
             return $this->error($res['des']);
