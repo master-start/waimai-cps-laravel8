@@ -89,7 +89,7 @@ class MiniProgramController extends BaseController
         $res['open_share'] = 1;
         $res['is_pay'] = 0; //0=off,1=on
         $res['min_take_out'] = 1;
-        $res['poster_bg'] = 'https://lanchong.oss.94mmp.cn/waimai/1615987229.png';
+        $res['poster_bg'] = 'https://cps.open-shop.cn/img/1615987229.png';
         $res['share_content_ele'] = '饿了么餐前福利！外卖红包天天领，最高可得66元！';
         $res['share_content_meituan'] = '美团餐前福利！外卖红包天天领，最高可得66元！';
         $res['share_title'] = '天天来领外卖优惠券！';
