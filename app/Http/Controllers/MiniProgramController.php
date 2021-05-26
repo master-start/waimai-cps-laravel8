@@ -114,7 +114,8 @@ class MiniProgramController extends BaseController
         $res = $meiTuan->miniCode();
         if ($res['status'] == 0 && !empty($res['data'])){
             self::downFile($res['data'],'img/','mt.png');
-            return $this->success($res['data']);
+            $url = 'https://cps.open-shop.cn/img/mt.png';
+            return $this->success($url);
         }else{
             return $this->error($res['des']);
         }
