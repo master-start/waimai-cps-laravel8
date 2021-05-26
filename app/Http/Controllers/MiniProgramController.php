@@ -44,9 +44,9 @@ class MiniProgramController extends BaseController
         $filename = '';
         // 保存小程序码到文件
         if ($response instanceof \EasyWeChat\Kernel\Http\StreamResponse) {
-            $filename = $response->saveAs('pages/index/index', 'appcode'.$user_id.'.png');
+            $filename = $response->saveAs('miniCode', 'appcode'.$user_id.'.png');
         }
-        $res['img'] = $filename;
+        $res['img'] = 'https://cps.open-shop.cn/miniCode/'.$filename;
         return $this->success($res);
     }
     /**
