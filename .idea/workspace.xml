@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8185abe7-ec1e-4c7e-802f-0f53c4a0da52" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MiniProgramController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MiniProgramController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +181,7 @@
       <updated>1621928880570</updated>
       <workItem from="1621928882134" duration="24082000" />
       <workItem from="1622009191636" duration="34000" />
-      <workItem from="1622017553063" duration="3838000" />
+      <workItem from="1622017553063" duration="4014000" />
     </task>
     <servers />
   </component>
