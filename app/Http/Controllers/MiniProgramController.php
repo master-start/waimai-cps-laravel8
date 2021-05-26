@@ -85,7 +85,7 @@ class MiniProgramController extends BaseController
         $res['appid'] = env('WECHAT_MINI_PROGRAM_APPID');
         $res['app_name'] = '外卖优惠券';
         $res['official_account_appid'] = env('WECHAT_MINI_PROGRAM_APPID');
-        $res['official_account_qrcode'] = 'https://chongkelai.oss-accelerate.aliyuncs.com/images/17/2021/05/hZ3q9Tbo9Ot29tlZYmMzMcoBTta527.jpeg';
+        $res['official_account_qrcode'] = 'https://cps.open-shop.cn/img/hZ3q9Tbo9Ot29tlZYmMzMcoBTta527.jpeg';
         $res['open_share'] = 1;
         $res['is_pay'] = 0; //0=off,1=on
         $res['min_take_out'] = 1;
