@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Ad;
 use App\Banner;
 use App\User;
 
@@ -16,6 +17,15 @@ class UserController extends BaseController
     }
 
     /**
+     * 广告图
+     * @return false|string
+     */
+    public function ad(){
+        $data = Ad::orderBy('sort','asc')->get();
+        return $this->success($data);
+    }
+
+    /**
      * 根据openid或手机号获取用户信息
      * @param $data
      * @return mixed
@@ -25,6 +35,7 @@ class UserController extends BaseController
             ->orwhere('mobile',$data)
             ->first();
     }
+
     /**
      * 用户注册和更新
      * @param $data

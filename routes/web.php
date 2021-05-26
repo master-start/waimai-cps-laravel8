@@ -30,6 +30,7 @@ Route::prefix('user')->group(function (){
     Route::any('user/wxQrcode',[\App\Http\Controllers\MiniProgramController::class,'wxQrcode']);
     Route::any('index/get_meituan_qrcode',[\App\Http\Controllers\MiniProgramController::class,'get_meituan_qrcode']);
     Route::any('index/banner',[\App\Http\Controllers\UserController::class,'banner']);
+    Route::any('index/ad',[\App\Http\Controllers\UserController::class,'ad']);
     Route::any('test',function (){
         return 111;
     });
