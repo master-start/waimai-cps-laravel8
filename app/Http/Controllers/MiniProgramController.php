@@ -80,7 +80,7 @@ class MiniProgramController extends BaseController
         $res['official_account_appid'] = env('WECHAT_MINI_PROGRAM_APPID');
         $res['official_account_qrcode'] = 'https://chongkelai.oss-accelerate.aliyuncs.com/images/17/2021/05/hZ3q9Tbo9Ot29tlZYmMzMcoBTta527.jpeg';
         $res['open_share'] = 1;
-        $res['is_pay'] = 0;
+        $res['is_pay'] = 0; //0=off,1=on
         $res['min_take_out'] = 1;
         $res['poster_bg'] = 'https://lanchong.oss.94mmp.cn/waimai/1615987229.png';
         $res['share_content_ele'] = '饿了么餐前福利！外卖红包天天领，最高可得66元！';
